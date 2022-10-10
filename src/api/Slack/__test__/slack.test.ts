@@ -187,5 +187,3 @@ describe('tested test', () => {
     expect(true).toBe(true);
   });
 });
-
-export {};
