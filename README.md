@@ -1,4 +1,4 @@
-# Hatch Layer - API Gateway
+# Mitey
 
 ## Description
 
@@ -15,7 +15,6 @@ This Hatch Layer is a micro-app built in NextJS used as both a frontend and midd
 
 ### Important links
 
-* [Architecture Link](https://altruist.atlassian.net/wiki/spaces/PIA/pages/1877180704/Public+API+User+Authentication#Public-API-User-Authentication-Flow)
 * [local](http://localhost:3000)
 
 ### Feature flags
@@ -58,31 +57,3 @@ Here are some other variants:
 ### Troubleshooting
 
 - delete `node_modules`, run `npm run cache clean --force` then `npm run install --force --verbose`
-
-## Ownership
-
-This repository is maintained by the SPG front end team
-
-### Experts
-
-Reach out to the following engineers if you have questions about this repo/service:
-
-- Kyle Williams: [kyle.williams@altruist.com](mailto:kyle.williams@altruist.com), [Slack](https://altruistcorp.slack.com/archives/D02U1MVKZU4)
-- David Porcel: [david.porcel@altruist.com](mailto:david.porcel@altruist.com), [Slack](https://altruistcorp.slack.com/archives/D034WGXJC80)
-- Chris Jeffery: [chris.jeffery@altruist.com](mailto:chris.jeffery@altruist.com), [Slack](https://altruistcorp.slack.com/archives/D0317AFC6JD)
-- Israel Ortiz: [israel.ortiz@altruist.com](mailto:israel.ortiz@altruist.com), [Slack](https://altruistcorp.slack.com/team/U01ST5Z3R4G)
-
-
- .----------------.  .----------------.  .----------------.  .----------------.  .----------------. 
-| .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
-| |  ____  ____  | || |      __      | || |  _________   | || |     ______   | || |  ____  ____  | |
-| | |_   ||   _| | || |     /  \     | || | |  _   _  |  | || |   .' ___  |  | || | |_   ||   _| | |
-| |   | |__| |   | || |    / /\ \    | || | |_/ | | \_|  | || |  / .'   \_|  | || |   | |__| |   | |
-| |   |  __  |   | || |   / ____ \   | || |     | |      | || |  | |         | || |   |  __  |   | |
-| |  _| |  | |_  | || | _/ /    \ \_ | || |    _| |_     | || |  \ `.___.'\  | || |  _| |  | |_  | |
-| | |____||____| | || ||____|  |____|| || |   |_____|    | || |   `._____.'  | || | |____||____| | |
-| |              | || |              | || |              | || |              | || |              | |
-| '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
- '----------------'  '----------------'  '----------------'  '----------------'  '----------------' 
-
- 
