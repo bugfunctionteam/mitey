@@ -21,14 +21,5 @@ const securityHeaders = [
 module.exports = withPreact(
   withBundleAnalyzer({
     trailingSlash: false,
-    async headers() {
-      return [
-        {
-          // Apply these headers to all routes in your application.
-          source: '/:path*',
-          headers: securityHeaders,
-        },
-      ];
-    },
   }),
 );
