@@ -1,3 +1,3 @@
-import { handlers } from "~/api/Slack/handlers";
+import { handlers } from '~/api/Slack/handlers';
 
 export default handlers;

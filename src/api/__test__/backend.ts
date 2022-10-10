@@ -1,5 +1,5 @@
 import { setupServer } from 'msw/node'; // eslint-disable-line
-import { rest } from 'msw';
+import { DefaultBodyType, rest } from 'msw';
 import { DefaultParams, DefaultReq, DefaultRes, Factory, MockRestResolver, RestResolver } from '~/types/tests';
 
 /** Mock Service Worker to catch and mock microservice responses. */
@@ -8,17 +8,17 @@ export const backend = setupServer(...[]);
 // #region Types
 type MswRestMethod = keyof typeof rest;
 type MswRestParameters = Parameters<typeof rest.get>;
-export interface MockRestConfigForFetch<Req = DefaultReq, Res = DefaultRes, Params extends DefaultParams = DefaultParams> {
+export interface MockRestConfigForFetch<Req extends DefaultBodyType = DefaultReq, Res extends DefaultBodyType = DefaultRes, Params extends DefaultParams = DefaultParams> {
   method: MswRestMethod;
   path: MswRestParameters[0];
   forFetch: (override?: DeepPartial<OverrideWithStatus<Res>>) => MockRestConfig<Req, Res, Params>
 }
 
-export type MockRestConfig<Req = DefaultReq, Res = DefaultRes, Params extends DefaultParams = DefaultParams> = 
+export type MockRestConfig<Req extends DefaultBodyType = DefaultReq, Res extends DefaultBodyType = DefaultRes, Params extends DefaultParams = DefaultParams> = 
   Omit<MockRestConfigForFetch<Req, Res, Params>, 'forFetch'> & 
   { handler: RestResolver<Req, Res, Params> | MockRestResolver<Req, Res, Params>; }
 
-export interface MockRestConfig2<Req = DefaultReq, Res = DefaultRes, Params extends DefaultParams = DefaultParams> {
+export interface MockRestConfig2<Req extends DefaultBodyType = DefaultReq, Res extends DefaultBodyType = DefaultRes, Params extends DefaultParams = DefaultParams> {
   method: MswRestMethod;
   path: MswRestParameters[0];
   factory: Factory<unknown>;
@@ -26,30 +26,30 @@ export interface MockRestConfig2<Req = DefaultReq, Res = DefaultRes, Params exte
 }
 
 interface MockBackend {
-  rest<Req = DefaultReq, Res = DefaultRes, Params extends DefaultParams = DefaultParams>(
+  rest<Req extends DefaultBodyType = DefaultReq, Res extends DefaultBodyType = DefaultRes, Params extends DefaultParams = DefaultParams>(
     config: MockRestConfig<Req, Res, Params>,
   ): MockBackend;
-  fetch<Req = DefaultReq, Res = DefaultRes, Params extends DefaultParams = DefaultParams>(
+  fetch<Req extends DefaultBodyType = DefaultReq, Res extends DefaultBodyType = DefaultRes, Params extends DefaultParams = DefaultParams>(
     config: MockRestConfig<Req, Res, Params>,
   ): MockBackend;
 
-  get<Req = DefaultReq, Res = DefaultRes, Params extends DefaultParams = DefaultParams>(
+  get<Req extends DefaultBodyType = DefaultReq, Res extends DefaultBodyType = DefaultRes, Params extends DefaultParams = DefaultParams>(
     path: MockRestConfig['path'],
     handler: MockRestConfig<Req, Res, Params>['handler'],
   ): MockBackend;
-  post<Req = DefaultReq, Res = DefaultRes, Params extends DefaultParams = DefaultParams>(
+  post<Req extends DefaultBodyType = DefaultReq, Res extends DefaultBodyType = DefaultRes, Params extends DefaultParams = DefaultParams>(
     path: MockRestConfig['path'],
     handler: MockRestConfig<Req, Res, Params>['handler'],
   ): MockBackend;
-  put<Req = DefaultReq, Res = DefaultRes, Params extends DefaultParams = DefaultParams>(
+  put<Req extends DefaultBodyType = DefaultReq, Res extends DefaultBodyType = DefaultRes, Params extends DefaultParams = DefaultParams>(
     path: MockRestConfig['path'],
     handler: MockRestConfig<Req, Res, Params>['handler'],
   ): MockBackend;
-  delete<Req = DefaultReq, Res = DefaultRes, Params extends DefaultParams = DefaultParams>(
+  delete<Req extends DefaultBodyType = DefaultReq, Res extends DefaultBodyType = DefaultRes, Params extends DefaultParams = DefaultParams>(
     path: MockRestConfig['path'],
     handler: MockRestConfig<Req, Res, Params>['handler'],
   ): MockBackend;
-  patch<Req = DefaultReq, Res = DefaultRes, Params extends DefaultParams = DefaultParams>(
+  patch<Req extends DefaultBodyType = DefaultReq, Res extends DefaultBodyType = DefaultRes, Params extends DefaultParams = DefaultParams>(
     path: MockRestConfig['path'],
     handler: MockRestConfig<Req, Res, Params>['handler'],
   ): MockBackend;

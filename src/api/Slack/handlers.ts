@@ -6,7 +6,7 @@ export const getToken = async (
   res: NextApiResponse,
 ) => {
   if (req.body.challenge) {
-    return res.send(req.body.challenge)
+    return res.send(req.body.challenge);
   }
 };
 
