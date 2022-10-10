@@ -188,4 +188,4 @@ describe('tested test', () => {
   });
 });
 
-export {}
+export {};
