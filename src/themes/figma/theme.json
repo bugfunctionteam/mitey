@@ -1,0 +1,158 @@
+{
+  "colors": {
+    "Black": "#171a1c",
+    "Dark Gray": "#474e51",
+    "Light Gray": "#e7e7e7",
+    "20Black": "#dadcdc",
+    "Orange": "#ff5c38",
+    "White": "#ffffff",
+    "40Black": "#b5b8b9",
+    "Green Highlight": "#00ba8b",
+    "Blue": "#3190e9",
+    "5Black": "#f6f6f6",
+    "10Black": "#ededee",
+    "Yellow": "#f0cc15",
+    "Red": "#ff3838",
+    "50Black": "#a3a6a8",
+    "80Black": "#454a4b",
+    "2.5Black": "#fafafa",
+    "60Black": "#919597",
+    "30Black": "#c8cacb",
+    "Green": "#00946a",
+    "90Black": "#2e3436",
+    "85Black": "#394043",
+    "70Black": "#7e8385",
+    "20 HGreen": "#ccf1e8",
+    "Blue Highlight": "#3c9eff",
+    "White — High Emphasis": "#ffffff",
+    "20HGreen": "#ccf1e8",
+    "40HGreen": "#99e3d1",
+    "40Green": "#99d4c3",
+    "60Green": "#66bfa6",
+    "95Black": "#222729",
+    "90Green": "#1a9f79",
+    "80Orange": "#ff7051",
+    "80Blue": "#5ea8ee",
+    "60HGreen": "#66d6b9",
+    "60Orange": "#ff8165",
+    "80Green": "#33a988",
+    "20Green": "#cceae1",
+    "80HGreen": "#33c8a2",
+    "60Blue": "#83bcf2",
+    "40Blue": "#add3f6",
+    "20Blue": "#d6e9fb",
+    "95 Black": "#222729",
+    "Fills / Accent Color": "#007aff",
+    "Dark Green": "#133a2c"
+  },
+  "textStyles": {
+    "Caption 1": {
+      "fontFamily": "Aktiv Grotesk",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 1.4628570556640625
+    },
+    "H4": {
+      "fontFamily": "Aktiv Grotesk",
+      "fontWeight": 400,
+      "fontSize": 20,
+      "lineHeight": 1.1946665954589843
+    },
+    "Caption 2": {
+      "fontFamily": "Aktiv Grotesk",
+      "fontWeight": 400,
+      "fontSize": 12,
+      "lineHeight": 1.5644444274902343
+    },
+    "Body": {
+      "fontFamily": "Aktiv Grotesk",
+      "fontWeight": 400,
+      "fontSize": 18,
+      "lineHeight": 1.5170370483398437
+    },
+    "Navigation": {
+      "fontFamily": "Aktiv Grotesk",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 1.066666717529297
+    },
+    "Body Sub": {
+      "fontFamily": "Aktiv Grotesk",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 1.7066667175292969
+    },
+    "H1 - Headline": {
+      "fontFamily": "Ivar Headline Medium",
+      "fontWeight": 500,
+      "fontSize": 52,
+      "lineHeight": 1
+    },
+    "H3": {
+      "fontFamily": "Aktiv Grotesk",
+      "fontWeight": 400,
+      "fontSize": 24,
+      "lineHeight": 1.1377777862548828
+    },
+    "H2 Serif": {
+      "fontFamily": "Ivar Headline Medium",
+      "fontWeight": 500,
+      "fontSize": 42,
+      "lineHeight": 1
+    },
+    "Body 1 / Roboto Regular": {
+      "fontFamily": "Roboto",
+      "fontWeight": 400,
+      "fontSize": 18,
+      "lineHeight": 1.3274073791503906
+    },
+    "Subtitle 1 / Roboto Regular": {
+      "fontFamily": "Roboto",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 1.28
+    },
+    "Navigation-HoverActive": {
+      "fontFamily": "Aktiv Grotesk",
+      "fontWeight": 400,
+      "fontSize": 16,
+      "lineHeight": 1.066666717529297
+    },
+    "H1 Mobile": {
+      "fontFamily": "Aktiv Grotesk",
+      "fontWeight": 400,
+      "fontSize": 20,
+      "lineHeight": 1.28
+    },
+    "Regular / Semibold": {
+      "fontFamily": "SF Pro Text",
+      "fontWeight": 600,
+      "fontSize": 17,
+      "lineHeight": 1.104313735961914
+    },
+    "Caption": {
+      "fontFamily": "Aktiv Grotesk",
+      "fontWeight": 400,
+      "fontSize": 14,
+      "lineHeight": 1.4628570556640625
+    }
+  },
+  "fonts": ["Aktiv Grotesk", "Ivar Headline Medium", "Roboto", "SF Pro Text"],
+  "fontSizes": [12, 14, 16, 17, 18, 20, 24, 42, 52],
+  "fontWeights": [400, 500, 600],
+  "lineHeights": [
+    1.4628570556640625,
+    1.1946665954589843,
+    1.5644444274902343,
+    1.5170370483398437,
+    1.066666717529297,
+    1.7066667175292969,
+    0.8205128479003906,
+    1.1377777862548828,
+    0.8126984405517578,
+    1.3274073791503906,
+    1.28,
+    1.104313735961914,
+    1
+  ]
+}
