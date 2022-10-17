@@ -1,4 +1,3 @@
-import { h } from 'preact';
 import { FC, PropsWithChildren } from 'react';
 import { DefaultTheme, ThemeProvider as Theme } from 'styled-components';
 

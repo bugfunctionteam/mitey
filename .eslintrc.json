@@ -33,14 +33,7 @@
     "react/react-in-jsx-scope": "off", 
     "react/jsx-boolean-value": "error",
     "react/prop-types": "off", // https://stackoverflow.com/a/54690878/2573621
-    "react-hooks/exhaustive-deps": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_",
-        "varsIgnorePattern": "h" // Preact's JSX pragma
-      }
-    ]
+    "react-hooks/exhaustive-deps": "off"
   },
   "overrides": [
     {

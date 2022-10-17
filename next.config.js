@@ -1,4 +1,3 @@
-const withPreact = require('next-plugin-preact');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 });
@@ -18,8 +17,7 @@ const securityHeaders = [
   },
 ];
 
-module.exports = withPreact(
-  withBundleAnalyzer({
+module.exports = withBundleAnalyzer({
     trailingSlash: false,
-  }),
+  },
 );

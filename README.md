@@ -8,7 +8,6 @@ This Hatch Layer is a micro-app built in NextJS used as both a frontend and midd
 
 * Typescript
 * NextJS
-* Preact
 * Styled Components
 * MSW
 * swagger-typescript-api (codegen)

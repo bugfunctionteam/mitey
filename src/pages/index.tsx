@@ -1,5 +1,4 @@
-import { h } from 'preact';
-import { HomePage } from '~/components/home';
+import { MainPage } from '~/components/main';
 import { setup } from '~/utils/csrf';
 
 // csrf
@@ -7,4 +6,4 @@ export const getServerSideProps = setup(async () => {
   return { props: {}};
 });
 
-export default HomePage;
+export default MainPage;

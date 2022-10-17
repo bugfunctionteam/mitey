@@ -1,5 +1,3 @@
-import { h } from 'preact';
-
 import { ThemeProvider } from '~/themes/ThemeProvider';
 import { defaultTheme } from '~/themes';
 import { ReactNode } from 'react';

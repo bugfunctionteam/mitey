@@ -8,14 +8,14 @@ const { generateApi } = require('swagger-typescript-api');
 
 const OUTPUT_PATH = './src/types/swagger';
 const OUTPUT = path.resolve(process.cwd(), OUTPUT_PATH);
-const INPUT_PATH = './public/Oauth2KongSpec.json';
-const INPUT_PATH2 = './public/Oauth2KongSpec2.json';
+const INPUT_PATH = './public/RandomSpec.json';
+const INPUT_PATH2 = './public/RandomSpec2.json';
 
 const URLS = [
   ...new Set(
     Object.values(process.env).filter((envVar) => {
       try {
-        return new URL(envVar).hostname === 'platform.dev1.altruistnet.tech';
+        return new URL(envVar).hostname === 'mitey.bugfunction.com';
       } catch {
         return false;
       }
