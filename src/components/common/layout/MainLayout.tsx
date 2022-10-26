@@ -4,7 +4,7 @@ import { StyledMainContainer, StyledMainLayout, StyledNavigation, StyledNavItem,
 import { ThemeProvider } from '~/themes/ThemeProvider';
 import { defaultTheme } from '~/themes';
 
-export const MainLayout: FC<PropsWithChildren> = (props) => {
+export const MainLayout: FC<PropsWithChildren> = (props: any) => {
   return (
     <ThemeProvider theme={defaultTheme}>
       <StyledMainLayout>
