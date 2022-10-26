@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { rem } from '~/themes/utilities/rem';
 import { viewport } from '~/themes/utilities/viewport';
-import { COMPONENT_BACKGROUND, MAIN_BACKGROUND,  } from '../globalStyles';
+import { COMPONENT_BACKGROUND, MAIN_BACKGROUND  } from '../globalStyles';
 
 export const StyledMainLayout = styled.div`
   display: flex;

@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import * as Kong from '~/types/swagger/kong';
 import { ApiError, constructHandlers, validateRequired } from '~/utils/api';
 import { ERROR_CODES, errorMapper } from '~/utils/errors';
 import axios from 'axios';
@@ -16,14 +15,12 @@ export interface GetTokenResponseData extends GetTokenRequestData {
   authenticated_userid?: string;
 }
 
-const Api = new Kong.Api();
-
 export const getToken = async (
   req: NextApiRequest,
   res: NextApiResponse<GetTokenResponseData | ApiError>,
 ) => {
   const body = validateRequired<
-    Kong.AuthenticateRequestBody & GetTokenRequestData
+  object & GetTokenRequestData
   >(res, req.body, [
     'username',
     'password',
@@ -34,7 +31,6 @@ export const getToken = async (
     'grant_type',
   ]);
   if (!body) { return; }
-  const { username, password, grant_type } = body;
 
   // TODO: remove once we have kong on dev1
   // TOUSE: if local and recieving self-signed certificate error
@@ -43,34 +39,34 @@ export const getToken = async (
   // });
 
   try {
-    const resp = await Api.idp.getAuthenticationUsingPost(
-      { username, password, grant_type },
-      {
-        headers: {
-          Authorization: `Basic ${Buffer.from(
-            `${process.env.HATCH_CLIENT_ID}:${process.env.HATCH_CLIENT_SECRET}`,
-          ).toString('base64')}`,
-        },
-        // httpsAgent: agent,
-      },
-    );
+    // const resp = await Api.idp.getAuthenticationUsingPost(
+    //   { username, password, grant_type },
+    //   {
+    //     headers: {
+    //       Authorization: `Basic ${Buffer.from(
+    //         `${process.env.HATCH_CLIENT_ID}:${process.env.HATCH_CLIENT_SECRET}`,
+    //       ).toString('base64')}`,
+    //     },
+    //     // httpsAgent: agent,
+    //   },
+    // );
 
-    const accessToken = resp.data.access_token;
-    let tokenInfo: Kong.TokenInfo;
+    // const accessToken = resp.data.access_token;
+    // let tokenInfo: Kong.TokenInfo;
 
-    try {
-      const tokenResp = await Api.idp.getTokenInfoUsingGet({
-        headers: { Authorization: `Bearer ${accessToken}` },
-        // httpsAgent: agent,
-      });
-      tokenInfo = tokenResp.data;
-    } catch (err) {
-      return errorMapper(res, {
-        code: ERROR_CODES.INVALID_CREDENTIALS,
-        description: String(err),
-        noRedirect: true,
-      });
-    }
+    // try {
+    //   const tokenResp = await Api.idp.getTokenInfoUsingGet({
+    //     headers: { Authorization: `Bearer ${accessToken}` },
+    //     // httpsAgent: agent,
+    //   });
+    //   tokenInfo = tokenResp.data;
+    // } catch (err) {
+    //   return errorMapper(res, {
+    //     code: ERROR_CODES.INVALID_CREDENTIALS,
+    //     description: String(err),
+    //     noRedirect: true,
+    //   });
+    // }
 
     return res.send({
       client_id: body.client_id || '',
@@ -78,13 +74,13 @@ export const getToken = async (
       scope: body.scope || '',
       redirect_uri: body.redirect_uri,
       state: body.state,
-      authenticated_userid: tokenInfo.user_name,
+      authenticated_userid: '',
     });
   } catch (err) {
     if (axios.isAxiosError(err)) {
       return errorMapper(res, {
         code: ERROR_CODES.INVALID_CREDENTIALS,
-        description: err?.message || err?.response?.data?.error_description,
+        description: 'Invlid redentials',
       });
     } else {
       return errorMapper(res, {

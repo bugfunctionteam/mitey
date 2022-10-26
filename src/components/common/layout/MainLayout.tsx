@@ -1,6 +1,6 @@
 import { PropsWithChildren, FC } from 'react';
 import Image from 'next/image';
-import { StyledMainContainer, StyledMainLayout, StyledNavContainer, StyledNavigation, StyledNavItem, StyledNavSettingsContainer } from './MainLayoutStyles';
+import { StyledMainContainer, StyledMainLayout, StyledNavigation, StyledNavItem, StyledNavSettingsContainer } from './MainLayoutStyles';
 import { ThemeProvider } from '~/themes/ThemeProvider';
 import { defaultTheme } from '~/themes';
 
@@ -9,7 +9,7 @@ export const MainLayout: FC<PropsWithChildren> = (props) => {
     <ThemeProvider theme={defaultTheme}>
       <StyledMainLayout>
         <StyledNavigation>
-        <StyledNavItem>
+          <StyledNavItem>
             <Image
               alt="Mitey Logo"
               src="/images/mitey-logo.svg"

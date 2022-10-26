@@ -1,10 +1,6 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
 import { Column } from '~/components/common/layout/MainLayoutStyles';
 import { MainLayout } from '~/components/common/layout/MainLayout';
-import { H1Row, DetailsRow, CenteredColumn } from './MainStyles';
-import { Button } from '~/components/authorize/components/button';
-import Image from 'next/image';
+import { H1Row, DetailsRow } from './MainStyles';
 import { NextPage } from 'next';
 
 export const MainPage: NextPage = () => {

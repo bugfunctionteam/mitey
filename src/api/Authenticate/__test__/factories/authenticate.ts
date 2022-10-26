@@ -1,10 +1,9 @@
 import casual from 'casual';
-import * as Kong from '~/types/swagger/kong';
 import { Factory } from '~/types/tests';
 import { ApiErrorResponse } from '~/utils/api';
 import { ERROR_CODES } from '~/utils/errors';
 
-export const authenticateFactory: Factory<Kong.Authenticate | ApiErrorResponse> = (obj) => {
+export const authenticateFactory: Factory<object | ApiErrorResponse> = (obj) => {
   if (obj && 'error' in obj) {
     return {
       error: ERROR_CODES.INVALID_CLIENT,
