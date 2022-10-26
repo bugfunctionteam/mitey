@@ -5,7 +5,7 @@ import { ApiErrorResponse } from '~/utils/api';
 export const getTokenMock: MockRestConfigForFetch<
 object,
 object | ApiErrorResponse,
-object
+{ [x: string]: string }
 > = {
   method: 'post',
   path: `${process.env.KONG_HTTPS_API}/idp/oauth/token`,
@@ -21,13 +21,13 @@ object
 };
 
 export const getTokenInfoMock: MockRestConfigForFetch<
-Kong.Idp.GetTokenInfoUsingGet.RequestBody,
-Kong.Idp.GetTokenInfoUsingGet.ResponseBody,
-Kong.Idp.GetTokenInfoUsingGet.RequestParams
+object,
+object,
+{ [x: string]: string }
 > = {
   method: 'get',
   path: `${process.env.KONG_HTTPS_API}/idp/oauth2/token/introspect`,
-  forFetch(override?: OverrideWithStatus<Partial<Kong.TokenInfo>>) {
+  forFetch(override?: OverrideWithStatus<Partial<object>>) {
     return {
       method: this.method,
       path: this.path,
