@@ -6,7 +6,7 @@ export const slackEvent = async (
   res: NextApiResponse,
 ) => {
   if (req.body.challenge) {
-    console.log('BODY', req.body);
+    console.log(req.body);
     return res.send(req.body.challenge);
   }
 };
