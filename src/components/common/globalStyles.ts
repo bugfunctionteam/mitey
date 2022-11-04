@@ -2,6 +2,8 @@ export const MAIN_BACKGROUND = '#120709';
 
 export const COMPONENT_BACKGROUND = '#1B0E10';
 
+export const COMPONENT_ACCENT = '#392125';
+
 export const SELECTED_BACKGROUND = '#2E1A1D';
 
 export const WHITE = '#FFFFFF';

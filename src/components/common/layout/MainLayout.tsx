@@ -3,6 +3,8 @@ import Image from 'next/image';
 import { StyledMainContainer, StyledMainLayout, StyledNavigation, StyledNavItem, StyledNavSettingsContainer } from './MainLayoutStyles';
 import { ThemeProvider } from '~/themes/ThemeProvider';
 import { defaultTheme } from '~/themes';
+import { GearIcon } from '../icons/GearIcon';
+import { SignOutIcon } from '../icons/SignOutIcon';
 
 export const MainLayout: FC<PropsWithChildren> = (props) => {
   return (
@@ -22,17 +24,13 @@ export const MainLayout: FC<PropsWithChildren> = (props) => {
           </StyledNavContainer> */}
           <StyledNavSettingsContainer>
             <StyledNavItem>
-              <Image
-                alt="Settings"
-                src="/images/gear-six.svg"
+              <GearIcon
                 height={30}
                 width={45}
               />
             </StyledNavItem>
             <StyledNavItem>
-              <Image
-                alt="Settings"
-                src="/images/sign-out.svg"
+              <SignOutIcon
                 height={30}
                 width={45}
               />
