@@ -1,6 +1,6 @@
 import { Column } from '~/components/common/layout/MainLayoutStyles';
 import { MainLayout } from '~/components/common/layout/MainLayout';
-import { H1Row, DetailsRow, TopRow, SupportTicketContainer, Header, HeaderLeft, HeaderRight, Name, PostDate, Description, TicketFileContainer, IconBorder, FileName } from './SupportTicketStyles';
+import { SupportTicketContainer, Header, HeaderLeft, HeaderRight, Name, PostDate, Description, TicketFileContainer, IconBorder, FileName } from './SupportTicketStyles';
 import { NextPage } from 'next';
 import { Container } from '../common/containers/Container';
 import { rem } from '~/themes/utilities/rem';
