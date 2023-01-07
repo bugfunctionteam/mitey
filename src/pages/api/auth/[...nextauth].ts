@@ -17,13 +17,13 @@ export const authOptions: AuthOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_ID || '814241394166-v4hruj0iul88pq7mq7fpjpc41sifpr96.apps.googleusercontent.com',
       clientSecret: process.env.GOOGLE_SECRET || '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',
-      authorization: {
-        params: {
-          prompt: 'consent',
-          access_type: 'offline',
-          response_type: 'code',
-        },
-      },
+      // authorization: {
+      //   params: {
+      //     prompt: 'consent',
+      //     access_type: 'offline',
+      //     response_type: 'code',
+      //   },
+      // },
     }),
     // Passwordless / email sign in
     EmailProvider({
