@@ -39,35 +39,35 @@ export const authOptions: AuthOptions = {
     }),
     // ...add more providers here
   ],
-  callbacks: {
-    async jwt({ token, account }) {
-      // Persist the OAuth access_token to the token right after signin
-      if (account) {
-        token.accessToken = account.access_token;
-      }
-      return token;
-    },
-    async session({ session, token, user }) {
-      // Send properties to the client, like an access_token from a provider.
-      (session as Record<string, any>).accessToken = token.accessToken;
-      return session;
-    },
-  },
-  jwt: {
-    // signingKey: process.env.JWT_SIGNING_PRIVATE_KEY,
-    //
-    // // You can also specify a public key for verification if using public/private key (but private only is fine)
-    // verificationKey: process.env.JWT_SIGNING_PUBLIC_KEY,
-    //
-    // // If you want to use some key format other than HS512 you can specify custom options to use
-    // // when verifying (note: verificationOptions should include a value for maxTokenAge as well).
-    // // verificationOptions = {
-    // //   maxTokenAge: `${maxAge}s`, // e.g. `${30 * 24 * 60 * 60}s` = 30 days
-    // //   algorithms: ['HS512']
-    // // },
+  // callbacks: {
+  //   async jwt({ token, account }) {
+  //     // Persist the OAuth access_token to the token right after signin
+  //     if (account) {
+  //       token.accessToken = account.access_token;
+  //     }
+  //     return token;
+  //   },
+  //   async session({ session, token, user }) {
+  //     // Send properties to the client, like an access_token from a provider.
+  //     (session as Record<string, any>).accessToken = token.accessToken;
+  //     return session;
+  //   },
+  // },
+  // jwt: {
+  //   // signingKey: process.env.JWT_SIGNING_PRIVATE_KEY,
+  //   //
+  //   // // You can also specify a public key for verification if using public/private key (but private only is fine)
+  //   // verificationKey: process.env.JWT_SIGNING_PUBLIC_KEY,
+  //   //
+  //   // // If you want to use some key format other than HS512 you can specify custom options to use
+  //   // // when verifying (note: verificationOptions should include a value for maxTokenAge as well).
+  //   // // verificationOptions = {
+  //   // //   maxTokenAge: `${maxAge}s`, // e.g. `${30 * 24 * 60 * 60}s` = 30 days
+  //   // //   algorithms: ['HS512']
+  //   // // },
 
-    secret: process.env.JWT_SECRET || 'gjuiytkg7869bg8769kf764ifvk',
-  },
+  //   secret: process.env.JWT_SECRET || 'gjuiytkg7869bg8769kf764ifvk',
+  // },
   theme: {
     colorScheme: 'dark', // "auto" | "dark" | "light"
     brandColor: PRIMARY_TEXT_COLOR, // Hex color code
