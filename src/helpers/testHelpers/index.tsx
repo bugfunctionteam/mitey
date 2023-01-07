@@ -19,6 +19,7 @@ export function createMockRouter(router?: Partial<NextRouter>): NextRouter {
     asPath: '/',
     back: jest.fn(),
     beforePopState: jest.fn(),
+    forward: jest.fn(),
     prefetch: jest.fn(),
     push: jest.fn(),
     reload: jest.fn(),
