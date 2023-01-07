@@ -28,7 +28,7 @@
     "linebreak-style": ["error", "windows"],
     "semi": ["error", "always"],
     "quotes": ["error", "single", { "avoidEscape": true }],
-    "import/no-default-export": "error",
+    "import/no-default-export": "off",
     "jest/valid-title": ["error", { "ignoreTypeOfDescribeName": true }],
     "react/react-in-jsx-scope": "off", 
     "react/jsx-boolean-value": "error",
