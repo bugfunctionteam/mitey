@@ -37,7 +37,7 @@ export const MainPage: NextPage = () => {
               name='search'
               placeholder='Search'
               buttonIcon={<SearchIcon height={25} />}
-              onClick={() => {console.log('action'}}
+              onClick={() => {console.log('action')}}
               style={{ padding: `${rem(20)} 0` }}
             />
           </HeaderLeft>
@@ -45,7 +45,7 @@ export const MainPage: NextPage = () => {
             <Button
               text=''
               icon={<NotificationIcon height={25} />}
-              onClick={() => {console.log('action'}}
+              onClick={() => {console.log('action')}}
             />
             <Dropdown
               text={sessionLoading ? 'Loading...' : 'Kyle Williams'}
@@ -72,7 +72,7 @@ export const MainPage: NextPage = () => {
               settings={{
                 title: 'Add Employee',
                 logo: <AddUserIcon />,
-                action: () => {console.log('action'},
+                action: () => {console.log('action')},
               }}
               fill
             >

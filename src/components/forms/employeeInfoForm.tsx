@@ -172,7 +172,7 @@ export const EmployeeInfoForm = (props: { initialValues: EmployeeFormValues; }) 
               type="submit"
               disabled={isUnedited || isSubmitting}
               text='Submit'
-              onClick={() => {console.log('action'}}
+              onClick={() => {console.log('action')}}
             />
           </StyledForm>
         );
