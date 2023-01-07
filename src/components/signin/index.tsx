@@ -38,7 +38,7 @@ export const SignInPage: NextPage = () => {
               settings={{
                 title: 'Add Employee',
                 logo: <AddUserIcon />,
-                action: () => {},
+                action: () => {console.log('action')},
               }}
               fill
             >
