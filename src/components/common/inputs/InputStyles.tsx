@@ -43,13 +43,13 @@ export const StyledInput = styled.input`
 //   align-items: center;
 //   justify-content: center;
 
-  // & > svg {
-  //   stroke: ${TERTIARY_TEXT_COLOR};
-  // }
+// & > svg {
+//   stroke: ${TERTIARY_TEXT_COLOR};
+// }
 
-  // & > svg:hover {
-  //   stroke: ${SECONDARY_TEXT_COLOR};
-  // }
+// & > svg:hover {
+//   stroke: ${SECONDARY_TEXT_COLOR};
+// }
 // `;
 
 // export const StyledTitle = styled.p`

@@ -47,7 +47,7 @@ export const EmployeePage: NextPage = () => {
             name='search'
             placeholder='Search'
             buttonIcon={<SearchIcon height={25} />}
-            onClick={() => {}}
+            onClick={() => {console.log('action'}}
             style={{ padding: `${rem(20)} 0` }}
           />
         </HeaderLeft>
@@ -55,7 +55,7 @@ export const EmployeePage: NextPage = () => {
           <Button
             text=''
             icon={<NotificationIcon height={25} />}
-            onClick={() => {}}
+            onClick={() => {console.log('action'}}
           />
           <Dropdown
             text='Kyle Williams'
@@ -66,7 +66,7 @@ export const EmployeePage: NextPage = () => {
       <MainContainer style={{ flex: 1 }}>
         <Column style={{ flex: 1, marginRight: rem(20) }}>
           <TopRow>
-            <Container fill header={true} title="Profile">
+            <Container fill header title="Profile">
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: `0 ${rem(100)}` }}>
                 <Image
                   src={headshot}
@@ -76,12 +76,12 @@ export const EmployeePage: NextPage = () => {
                 <Button
                   text='Update'
                   style={{ marginTop: rem(20) }}
-                  onClick={() => {}}
+                  onClick={() => {console.log('action'}}
                 />
               </div>
               <EmployeeInfoForm initialValues={initialValues} />
             </Container>
-            <Container header={true} title="Updates from Admin" style={{ maxWidth: '30%' }}>
+            <Container header title="Updates from Admin" style={{ maxWidth: '30%' }}>
               <div>
                 <SupportTicket />
                 <SupportTicket />
@@ -89,12 +89,12 @@ export const EmployeePage: NextPage = () => {
             </Container>
           </TopRow>
           <Container
-            header={true}
+            header
             title="Employees"
             settings={{
               title: 'Add Employee',
               logo: <AddUserIcon />,
-              action: () => {},
+              action: () => {console.log('action'},
             }}
             fill
           >

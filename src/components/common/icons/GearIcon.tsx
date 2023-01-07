@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
 export const GearIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
@@ -7,4 +7,4 @@ export const GearIcon = (props: SVGProps<SVGSVGElement>) => {
       <path d="M16 22C19.3137 22 22 19.3137 22 16C22 12.6863 19.3137 10 16 10C12.6863 10 10 12.6863 10 16C10 19.3137 12.6863 22 16 22Z" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
-}
+};

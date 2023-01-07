@@ -11,5 +11,5 @@ export const H1 = styled.h1`
     line-height: ${h1ThemeStyles.lineHeight};`;
   }*/
   rem(16)
-  };
+};
 `;

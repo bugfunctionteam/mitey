@@ -1,10 +1,10 @@
-import { SessionProvider } from "next-auth/react"
+import { SessionProvider } from 'next-auth/react';
 import type { AppContext, AppProps } from 'next/app';
 
 import { GlobalStyle } from 'src/styles/GlobalStyle';
 import { ServerResponse } from 'http';
 import { Session } from 'next-auth';
-import App from "next/app";
+import App from 'next/app';
 
 export type ServerResponseWithLocals = ServerResponse & { locals?: {[x: string]: unknown} }
 

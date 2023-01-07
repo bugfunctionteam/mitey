@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
 export const ComputerIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
@@ -12,4 +12,4 @@ export const ComputerIcon = (props: SVGProps<SVGSVGElement>) => {
       <path d="M15 15C15.5178 15 15.9375 14.5803 15.9375 14.0625C15.9375 13.5447 15.5178 13.125 15 13.125C14.4822 13.125 14.0625 13.5447 14.0625 14.0625C14.0625 14.5803 14.4822 15 15 15Z" fill="#EC94A4"/>
     </svg>
   );
-}
+};

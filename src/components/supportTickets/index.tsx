@@ -20,20 +20,20 @@ import { PaperIcon } from '../common/icons/PaperIcon';
 
 export const SupportTicket: NextPage = () => {
   return (
-      <SupportTicketContainer>
-        <Header>
-          <Name>Aspen Siphron</Name>
-          <PostDate>14:07 June 15, 2022</PostDate>
-        </Header>
-        <Description>
+    <SupportTicketContainer>
+      <Header>
+        <Name>Aspen Siphron</Name>
+        <PostDate>14:07 June 15, 2022</PostDate>
+      </Header>
+      <Description>
           Please send me the support file Mitey. We need to send the client who made the request
-        </Description>
-        <TicketFileContainer>
-          <IconBorder>
-            <PaperIcon height={20} width={20} />
-          </IconBorder>
-          <FileName>Mitey Support.ttx</FileName>
-        </TicketFileContainer>
-      </SupportTicketContainer>
+      </Description>
+      <TicketFileContainer>
+        <IconBorder>
+          <PaperIcon height={20} width={20} />
+        </IconBorder>
+        <FileName>Mitey Support.ttx</FileName>
+      </TicketFileContainer>
+    </SupportTicketContainer>
   );
 };

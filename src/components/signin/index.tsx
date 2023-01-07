@@ -33,7 +33,7 @@ export const SignInPage: NextPage = () => {
         <MainContainer style={{ flex: 1 }}>
           <Column style={{ flex: 1, marginRight: rem(20) }}>
             <Container
-              header={true}
+              header
               title="Employees"
               settings={{
                 title: 'Add Employee',

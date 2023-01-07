@@ -95,7 +95,7 @@ const StyledBadLabelInner = styled.button`
 `;
 
 export const StyledBooleanLabel: FC<PropsWithChildren<BooleanProps>> = (props) => {
-  const LabelInner = props.state === 'good' ? StyledGoodLabelInner : StyledBadLabelInner
+  const LabelInner = props.state === 'good' ? StyledGoodLabelInner : StyledBadLabelInner;
   return (<LabelInner>{props.children}</LabelInner>);
 };
 

@@ -94,9 +94,9 @@ export const constructHandlers = (handlers: HatchMethodHandlers, options?: Handl
 };
 
 export const hasSession = async (req: NextApiRequest, res: NextApiResponse<unknown>) => {
-  const session = await unstable_getServerSession(req, res, authOptions)
+  const session = await unstable_getServerSession(req, res, authOptions);
   if (session) {
     return true;
   }
   return false;
-}
+};

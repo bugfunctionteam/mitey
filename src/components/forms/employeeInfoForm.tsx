@@ -172,10 +172,10 @@ export const EmployeeInfoForm = (props: { initialValues: EmployeeFormValues; }) 
               type="submit"
               disabled={isUnedited || isSubmitting}
               text='Submit'
-              onClick={() => {}}
+              onClick={() => {console.log('action'}}
             />
           </StyledForm>
-        )
+        );
       }}
     </Formik>
   </div>

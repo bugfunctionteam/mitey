@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
 export const PaperIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
@@ -7,4 +7,4 @@ export const PaperIcon = (props: SVGProps<SVGSVGElement>) => {
       <path d="M9.5 2V5.5H13.0005" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
-}
+};

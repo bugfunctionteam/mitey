@@ -16,17 +16,17 @@ import { PaperIcon } from '../common/icons/PaperIcon';
 
 export const EmployeeBreakdown: NextPage = () => {
   return (
-      <EmployeeBreakdownContainer>
-        <Percentage>83%</Percentage>
-        <Description>Percentage of Onboarded Employees</Description>
-        <Statement>
-          <Stat># of Onboarded</Stat>
-          <StatAmount>64</StatAmount>
-        </Statement>
-        <Statement>
-          <Stat># of Employees</Stat>
-          <StatAmount>77</StatAmount>
-        </Statement>
-      </EmployeeBreakdownContainer>
+    <EmployeeBreakdownContainer>
+      <Percentage>83%</Percentage>
+      <Description>Percentage of Onboarded Employees</Description>
+      <Statement>
+        <Stat># of Onboarded</Stat>
+        <StatAmount>64</StatAmount>
+      </Statement>
+      <Statement>
+        <Stat># of Employees</Stat>
+        <StatAmount>77</StatAmount>
+      </Statement>
+    </EmployeeBreakdownContainer>
   );
 };

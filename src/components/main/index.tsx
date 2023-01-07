@@ -37,7 +37,7 @@ export const MainPage: NextPage = () => {
               name='search'
               placeholder='Search'
               buttonIcon={<SearchIcon height={25} />}
-              onClick={() => {}}
+              onClick={() => {console.log('action'}}
               style={{ padding: `${rem(20)} 0` }}
             />
           </HeaderLeft>
@@ -45,7 +45,7 @@ export const MainPage: NextPage = () => {
             <Button
               text=''
               icon={<NotificationIcon height={25} />}
-              onClick={() => {}}
+              onClick={() => {console.log('action'}}
             />
             <Dropdown
               text={sessionLoading ? 'Loading...' : 'Kyle Williams'}
@@ -56,23 +56,23 @@ export const MainPage: NextPage = () => {
         <MainContainer style={{ flex: 1 }}>
           <Column style={{ flex: 1, marginRight: rem(20) }}>
             <TopRow>
-              <Container fill header={true} title="Support Tickets">
+              <Container fill header title="Support Tickets">
                 {sessionLoading ? <></> : <SupportTicket />}
               </Container>
-              <Container fill header={true} title="Employee Breakdown">
+              <Container fill header title="Employee Breakdown">
                 {sessionLoading ? <></> : <EmployeeBreakdown />}
               </Container>
-              <Container fill header={true} title="Device Breakdown">
+              <Container fill header title="Device Breakdown">
                 {sessionLoading ? <></> : <DeviceBreakdown />}
               </Container>
             </TopRow>
             <Container
-              header={true}
+              header
               title="Employees"
               settings={{
                 title: 'Add Employee',
                 logo: <AddUserIcon />,
-                action: () => {},
+                action: () => {console.log('action'},
               }}
               fill
             >

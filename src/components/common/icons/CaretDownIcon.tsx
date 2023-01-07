@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
 export const CaretDownIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
@@ -6,4 +6,4 @@ export const CaretDownIcon = (props: SVGProps<SVGSVGElement>) => {
       <path d="M19.5 9L12 16.5L4.5 9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
-}
+};

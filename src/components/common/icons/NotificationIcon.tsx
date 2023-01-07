@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
 export const NotificationIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
@@ -7,4 +7,4 @@ export const NotificationIcon = (props: SVGProps<SVGSVGElement>) => {
       <path d="M12 24V25C12 26.0609 12.4214 27.0783 13.1716 27.8284C13.9217 28.5786 14.9391 29 16 29C17.0609 29 18.0783 28.5786 18.8284 27.8284C19.5786 27.0783 20 26.0609 20 25V24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
-}
+};

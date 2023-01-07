@@ -36,7 +36,7 @@ export const StyledTitle = styled.p`
   font-size: ${rem(16)};
   margin: 0;
   font-weight: bold;
-`
+`;
 
 export const StyledDataSection = styled.div`
   display: flex;

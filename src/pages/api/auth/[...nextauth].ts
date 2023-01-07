@@ -1,10 +1,10 @@
-import NextAuth, { AuthOptions, Session } from "next-auth"
-import GithubProvider from "next-auth/providers/github"
-import GoogleProvider from 'next-auth/providers/google'
-import EmailProvider from 'next-auth/providers/email'
-import { MongoDBAdapter } from "@next-auth/mongodb-adapter"
-import clientPromise from "lib/mongodb"
-import { MAIN_BACKGROUND, PRIMARY_TEXT_COLOR, RED_LOGO_COLOR, SECONDARY_TEXT_COLOR } from "~/components/common/globalStyles"
+import NextAuth, { AuthOptions, Session } from 'next-auth';
+import GithubProvider from 'next-auth/providers/github';
+import GoogleProvider from 'next-auth/providers/google';
+import EmailProvider from 'next-auth/providers/email';
+import { MongoDBAdapter } from '@next-auth/mongodb-adapter';
+import clientPromise from 'lib/mongodb';
+import { MAIN_BACKGROUND, PRIMARY_TEXT_COLOR, RED_LOGO_COLOR, SECONDARY_TEXT_COLOR } from '~/components/common/globalStyles';
 
 export const authOptions: AuthOptions = {
   adapter: MongoDBAdapter(clientPromise),
@@ -19,10 +19,10 @@ export const authOptions: AuthOptions = {
       clientSecret: process.env.GOOGLE_SECRET || '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',
       authorization: {
         params: {
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code"
-        }
+          prompt: 'consent',
+          access_type: 'offline',
+          response_type: 'code',
+        },
       },
     }),
     // Passwordless / email sign in
@@ -31,11 +31,11 @@ export const authOptions: AuthOptions = {
         host: process.env.EMAIL_SERVER_HOST || 'smtp.gmail.com',
         port: parseInt(process.env.EMAIL_SERVER_PORT || '0') || 465,
         auth: {
-          user: process.env.EMAIL_SERVER_USER || "admin@bugfunction.com",
-          pass: process.env.EMAIL_SERVER_PASSWORD || "{Willyums11G}",
-        }
+          user: process.env.EMAIL_SERVER_USER || 'admin@bugfunction.com',
+          pass: process.env.EMAIL_SERVER_PASSWORD || '{Willyums11G}',
+        },
       },
-      from: 'Mitey <noreply@bugfunction.com>'
+      from: 'Mitey <noreply@bugfunction.com>',
     }),
     // ...add more providers here
   ],
@@ -43,15 +43,15 @@ export const authOptions: AuthOptions = {
     async jwt({ token, account }) {
       // Persist the OAuth access_token to the token right after signin
       if (account) {
-        token.accessToken = account.access_token
+        token.accessToken = account.access_token;
       }
-      return token
+      return token;
     },
     async session({ session, token, user }) {
       // Send properties to the client, like an access_token from a provider.
-      (session as Record<string, any>).accessToken = token.accessToken
-      return session
-    }
+      (session as Record<string, any>).accessToken = token.accessToken;
+      return session;
+    },
   },
   jwt: {
     // signingKey: process.env.JWT_SIGNING_PRIVATE_KEY,
@@ -69,10 +69,10 @@ export const authOptions: AuthOptions = {
     secret: process.env.JWT_SECRET || 'gjuiytkg7869bg8769kf764ifvk',
   },
   theme: {
-    colorScheme: "dark", // "auto" | "dark" | "light"
+    colorScheme: 'dark', // "auto" | "dark" | "light"
     brandColor: PRIMARY_TEXT_COLOR, // Hex color code
-    logo: "http://localhost:3000/images/red-mitey-logo.svg", // Absolute URL to image
+    logo: 'http://localhost:3000/images/red-mitey-logo.svg', // Absolute URL to image
     buttonText: PRIMARY_TEXT_COLOR, // Hex color code
   },
-}
-export default NextAuth(authOptions)
+};
+export default NextAuth(authOptions);

@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
 export const SignOutIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
@@ -8,4 +8,4 @@ export const SignOutIcon = (props: SVGProps<SVGSVGElement>) => {
       <path d="M13 27H6C5.73478 27 5.48043 26.8946 5.29289 26.7071C5.10536 26.5196 5 26.2652 5 26V6C5 5.73478 5.10536 5.48043 5.29289 5.29289C5.48043 5.10536 5.73478 5 6 5H13" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
-}
+};

@@ -1,4 +1,4 @@
-import { SVGProps } from "react";
+import { SVGProps } from 'react';
 
 export const PackageIcon = (props: SVGProps<SVGSVGElement>) => {
   return (
@@ -9,4 +9,4 @@ export const PackageIcon = (props: SVGProps<SVGSVGElement>) => {
       <path d="M10.0742 10L10.0009 18.3454" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
     </svg>
   );
-}
+};

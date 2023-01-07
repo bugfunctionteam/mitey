@@ -1,6 +1,6 @@
 import { Column } from '~/components/common/layout/MainLayoutStyles';
 import { MainLayout } from '~/components/common/layout/MainLayout';
-import { HeaderLeft, HeaderRight, Name, PostDate, Description, TicketFileContainer, IconBorder, FileName, Percentage, Statement, Stat, StatAmount } from './EmployeeListStyles';
+import { HeaderLeft, HeaderRight, Name, PostDate, Description, TicketFileContainer, IconBorder, FileName, Percentage, Statement, Stat, StatAmount , StyledEmployeeListContainer, StyledEmployeeListItem } from './EmployeeListStyles';
 import { NextPage } from 'next';
 import { Container } from '../common/containers/Container';
 import { rem } from '~/themes/utilities/rem';
@@ -13,7 +13,7 @@ import { Dropdown } from '../common/inputs/Dropdown';
 import { SearchIcon } from '../common/icons/SearchIcon';
 import { NotificationIcon } from '../common/icons/NotificationIcon';
 import { PaperIcon } from '../common/icons/PaperIcon';
-import { StyledEmployeeListContainer, StyledEmployeeListItem } from '../employeeList/EmployeeListStyles';
+
 import { BooleanLabel } from '../common/labels/Label';
 import { CheckIcon } from '../common/icons/CheckIcon';
 import { ComputerIcon } from '../common/icons/ComputerIcon';
@@ -76,19 +76,19 @@ export const EmployeeListItem = (props: { employee: Employee }) => {
       <Button
         icon={<PaperIcon />}
         text='Deprovision Package'
-        onClick={() => {}}
+        onClick={() => {console.log('action'}}
         // style={{ margin: `0 ${rem(2.5)}` }}
       />
       <Button
         icon={<ComputerIcon />}
         text='Equipment Package'
-        onClick={() => {}}
+        onClick={() => {console.log('action'}}
         // style={{ margin: `0 ${rem(1.5)}` }}
       />
       <Button
         icon={<PackageIcon />}
         text='Swag Box'
-        onClick={() => {}}
+        onClick={() => {console.log('action'}}
         // style={{ margin: `0 ${rem(1.5)}` }}
       />
     </StyledEmployeeListItem>
@@ -97,13 +97,13 @@ export const EmployeeListItem = (props: { employee: Employee }) => {
 
 export const EmployeeList = () => {
   return (
-      <StyledEmployeeListContainer>
-        <>
-          {employees.map((e, i) => (
-            <EmployeeListItem key={i} employee={e} />
-          ))}
-        </>
-      </StyledEmployeeListContainer>
+    <StyledEmployeeListContainer>
+      <>
+        {employees.map((e, i) => (
+          <EmployeeListItem key={i} employee={e} />
+        ))}
+      </>
+    </StyledEmployeeListContainer>
   );
 };
 

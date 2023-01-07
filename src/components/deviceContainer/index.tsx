@@ -16,21 +16,21 @@ import { PaperIcon } from '../common/icons/PaperIcon';
 
 export const DeviceBreakdown: NextPage = () => {
   return (
-      <DeviceBreakdownContainer>
-        <Amount>79</Amount>
-        <Description>Amount of Employee Devices</Description>
-        <Statement>
-          <Stat># of Apple</Stat>
-          <StatAmount>72</StatAmount>
-        </Statement>
-        <Statement>
-          <Stat># of Windows</Stat>
-          <StatAmount>0</StatAmount>
-        </Statement>
-        <Statement>
-          <Stat># of Linux</Stat>
-          <StatAmount>5</StatAmount>
-        </Statement>
-      </DeviceBreakdownContainer>
+    <DeviceBreakdownContainer>
+      <Amount>79</Amount>
+      <Description>Amount of Employee Devices</Description>
+      <Statement>
+        <Stat># of Apple</Stat>
+        <StatAmount>72</StatAmount>
+      </Statement>
+      <Statement>
+        <Stat># of Windows</Stat>
+        <StatAmount>0</StatAmount>
+      </Statement>
+      <Statement>
+        <Stat># of Linux</Stat>
+        <StatAmount>5</StatAmount>
+      </Statement>
+    </DeviceBreakdownContainer>
   );
 };

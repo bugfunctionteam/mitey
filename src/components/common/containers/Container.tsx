@@ -21,27 +21,27 @@ interface Props {
 
 export const Container: FC<PropsWithChildren<Props>> = (props) => {
   return (
-        <StyledContainer style={{ ...props.style, width: props.fill ? '100%' : 'fit-content', flex: props.fill ? 1 : 'none' }}>
-          {props.header && (
-            <StyledHeader>
-              <StyledHeaderSection>
-                <StyledTitle>{props.title}</StyledTitle>
-              </StyledHeaderSection>
-              <StyledHeaderSection>
-                {props.settings && (
-                  <Button
-                    text={props.settings.title}
-                    icon={props.settings.logo}
-                    onClick={props.settings.action}
-                  />
-                )}
-                <OptionsIcon cursor="pointer" />
-              </StyledHeaderSection>
-            </StyledHeader>
-          )}
-          <StyledDataSection>
-            {props.children}
-          </StyledDataSection>
-        </StyledContainer>
+    <StyledContainer style={{ ...props.style, width: props.fill ? '100%' : 'fit-content', flex: props.fill ? 1 : 'none' }}>
+      {props.header && (
+        <StyledHeader>
+          <StyledHeaderSection>
+            <StyledTitle>{props.title}</StyledTitle>
+          </StyledHeaderSection>
+          <StyledHeaderSection>
+            {props.settings && (
+              <Button
+                text={props.settings.title}
+                icon={props.settings.logo}
+                onClick={props.settings.action}
+              />
+            )}
+            <OptionsIcon cursor="pointer" />
+          </StyledHeaderSection>
+        </StyledHeader>
+      )}
+      <StyledDataSection>
+        {props.children}
+      </StyledDataSection>
+    </StyledContainer>
   );
 };
