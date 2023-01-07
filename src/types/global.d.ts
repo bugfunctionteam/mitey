@@ -13,3 +13,5 @@ declare module 'http' {
 type ValueOf<T> = T[keyof T];
 
 type OverrideWithStatus<T> = T & { statusCode?: number }
+
+type SafeNumber = number | `${number}`

@@ -70,8 +70,9 @@ export const EmployeePage: NextPage = () => {
               <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: `0 ${rem(100)}` }}>
                 <Image
                   src={headshot}
-                  height={rem(2000)}
-                  width={rem(2000)}
+                  alt='headshot'
+                  height={rem(2000) as SafeNumber}
+                  width={rem(2000) as SafeNumber}
                 />
                 <Button
                   text='Update'
