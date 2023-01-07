@@ -47,7 +47,7 @@ export const EmployeePage: NextPage = () => {
             name='search'
             placeholder='Search'
             buttonIcon={<SearchIcon height={25} />}
-            onClick={() => {console.log('action')}}
+            onClick={() => {console.log('action');}}
             style={{ padding: `${rem(20)} 0` }}
           />
         </HeaderLeft>
@@ -55,7 +55,7 @@ export const EmployeePage: NextPage = () => {
           <Button
             text=''
             icon={<NotificationIcon height={25} />}
-            onClick={() => {console.log('action')}}
+            onClick={() => {console.log('action');}}
           />
           <Dropdown
             text='Kyle Williams'
@@ -76,7 +76,7 @@ export const EmployeePage: NextPage = () => {
                 <Button
                   text='Update'
                   style={{ marginTop: rem(20) }}
-                  onClick={() => {console.log('action')}}
+                  onClick={() => {console.log('action');}}
                 />
               </div>
               <EmployeeInfoForm initialValues={initialValues} />
@@ -94,7 +94,7 @@ export const EmployeePage: NextPage = () => {
             settings={{
               title: 'Add Employee',
               logo: <AddUserIcon />,
-              action: () => {console.log('action')},
+              action: () => {console.log('action');},
             }}
             fill
           >

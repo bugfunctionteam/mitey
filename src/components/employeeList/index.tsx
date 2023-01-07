@@ -76,19 +76,19 @@ export const EmployeeListItem = (props: { employee: Employee }) => {
       <Button
         icon={<PaperIcon />}
         text='Deprovision Package'
-        onClick={() => {console.log('action')}}
+        onClick={() => {console.log('action');}}
         // style={{ margin: `0 ${rem(2.5)}` }}
       />
       <Button
         icon={<ComputerIcon />}
         text='Equipment Package'
-        onClick={() => {console.log('action')}}
+        onClick={() => {console.log('action');}}
         // style={{ margin: `0 ${rem(1.5)}` }}
       />
       <Button
         icon={<PackageIcon />}
         text='Swag Box'
-        onClick={() => {console.log('action')}}
+        onClick={() => {console.log('action');}}
         // style={{ margin: `0 ${rem(1.5)}` }}
       />
     </StyledEmployeeListItem>
