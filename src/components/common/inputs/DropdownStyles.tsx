@@ -13,6 +13,8 @@ export const StyledDropdownContainer = styled.div`
 
   p {
     margin: 0;
+    font-size: ${rem(16)};
+    font-weight: bold;
   }
 
   & > svg {

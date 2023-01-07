@@ -2,6 +2,8 @@ import { NextApiHandler, NextApiRequest, NextApiResponse } from 'next';
 import { ERROR_CODES } from '~/utils/errors';
 import { csrf } from '~/utils/csrf';
 import { cors } from '~/utils/cors';
+import { unstable_getServerSession } from 'next-auth/next';
+import { authOptions } from '~/pages/api/auth/[...nextauth]';
 
 
 export interface HatchMethodHandlers {
@@ -90,3 +92,11 @@ export const constructHandlers = (handlers: HatchMethodHandlers, options?: Handl
   };
   return options?.csrf ? csrf(createdHandlers) : createdHandlers;
 };
+
+export const hasSession = async (req: NextApiRequest, res: NextApiResponse<unknown>) => {
+  const session = await unstable_getServerSession(req, res, authOptions)
+  if (session) {
+    return true;
+  }
+  return false;
+}

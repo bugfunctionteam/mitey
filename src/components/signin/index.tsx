@@ -1,6 +1,6 @@
 import { Column } from '~/components/common/layout/MainLayoutStyles';
 import { MainLayout } from '~/components/common/layout/MainLayout';
-import { H1Row, TopRow, MainContainer, Header, HeaderLeft, HeaderRight } from './MainStyles';
+import { H1Row, TopRow, MainContainer, Header, HeaderLeft, HeaderRight } from './SignInStyles';
 import { NextPage } from 'next';
 import { Container } from '~/components/common/containers/Container';
 import { rem } from '~/themes/utilities/rem';
@@ -22,7 +22,7 @@ import { useRouter } from 'next/router';
 // open support tickets?
 // service pricing? (settings page)
 
-export const MainPage: NextPage = () => {
+export const SignInPage: NextPage = () => {
   const router = useRouter();
   const { data: session, status } = useSession();
   const sessionLoading = status === 'loading';
@@ -30,42 +30,8 @@ export const MainPage: NextPage = () => {
   if (status === 'authenticated') {
     return (
       <MainLayout>
-        <Header>
-          <HeaderLeft>
-            <H1Row>Dashboard</H1Row>
-            <Input
-              name='search'
-              placeholder='Search'
-              buttonIcon={<SearchIcon height={25} />}
-              onClick={() => {}}
-              style={{ padding: `${rem(20)} 0` }}
-            />
-          </HeaderLeft>
-          <HeaderRight>
-            <Button
-              text=''
-              icon={<NotificationIcon height={25} />}
-              onClick={() => {}}
-            />
-            <Dropdown
-              text={sessionLoading ? 'Loading...' : 'Kyle Williams'}
-              style={{ margin: `${rem(20)} 0` }}
-            />
-          </HeaderRight>
-        </Header>
         <MainContainer style={{ flex: 1 }}>
           <Column style={{ flex: 1, marginRight: rem(20) }}>
-            <TopRow>
-              <Container fill header={true} title="Support Tickets">
-                {sessionLoading ? <></> : <SupportTicket />}
-              </Container>
-              <Container fill header={true} title="Employee Breakdown">
-                {sessionLoading ? <></> : <EmployeeBreakdown />}
-              </Container>
-              <Container fill header={true} title="Device Breakdown">
-                {sessionLoading ? <></> : <DeviceBreakdown />}
-              </Container>
-            </TopRow>
             <Container
               header={true}
               title="Employees"
@@ -90,7 +56,7 @@ export const MainPage: NextPage = () => {
   }
 
   if (status === 'unauthenticated') {
-    router.replace('/api/auth/signin');
+    router.replace('/signin');
   }
   return <><div /></>;
 };

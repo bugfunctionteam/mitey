@@ -20,6 +20,7 @@ export const StyledHeaderSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap;
 
   & > svg {
     stroke: ${TERTIARY_TEXT_COLOR};
@@ -40,5 +41,6 @@ export const StyledTitle = styled.p`
 export const StyledDataSection = styled.div`
   display: flex;
   padding: ${rem(10)};
+  justify-content: center;
 `;
 

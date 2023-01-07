@@ -1,4 +1,5 @@
 import { PropsWithChildren, FC } from 'react';
+import { CSSProperties } from 'styled-components';
 import { Button } from '../buttons/Button';
 import { OptionsIcon } from '../icons/OptionsIcon';
 import { StyledContainer, StyledDataSection, StyledHeader, StyledHeaderSection, StyledTitle } from './ContainerStyles';
@@ -15,11 +16,12 @@ interface Props {
   settings?: Settings;
   title?: string | JSX.Element;
   options?: JSX.Element;
+  style?: CSSProperties;
 }
 
 export const Container: FC<PropsWithChildren<Props>> = (props) => {
   return (
-        <StyledContainer style={{ width: props.fill ? '100%' : 'auto', flex: props.fill ? 1 : 'auto' }}>
+        <StyledContainer style={{ ...props.style, width: props.fill ? '100%' : 'fit-content', flex: props.fill ? 1 : 'none' }}>
           {props.header && (
             <StyledHeader>
               <StyledHeaderSection>

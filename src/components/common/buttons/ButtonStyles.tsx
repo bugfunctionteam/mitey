@@ -7,10 +7,13 @@ export const StyledButton = styled.button`
   display: flex;
   cursor: pointer;
   margin: 0 ${rem(10)};
-  border: ${rem(2)} solid ${SECONDARY_TEXT_COLOR};
+  border: 1px solid ${SECONDARY_TEXT_COLOR};
   color: ${PRIMARY_TEXT_COLOR};
   background: transparent;
   align-items: center;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
 
   &:hover {
     background: ${COMPONENT_ACCENT};
@@ -18,6 +21,12 @@ export const StyledButton = styled.button`
     svg {
       stroke: ${PRIMARY_TEXT_COLOR};
     }
+  }
+
+  &:disabled {
+    border: 1px solid ${TERTIARY_TEXT_COLOR};
+    color: ${TERTIARY_TEXT_COLOR};
+    font-weight: bold;
   }
 
   p {
